@@ -2,8 +2,6 @@ from dataHandling.handling import *
 from dataInput.input import *
 from dataStorage.storage import *
 
-
-
 # Defining main function
 def main():
     print("Hello World")
