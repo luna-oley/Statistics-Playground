@@ -4,6 +4,6 @@ class dataMaintainer:
     def __init__(self):
         return
 
-    def __print_storage(self):
+    def print_storage(self):
         print("Hello from storage")
         return

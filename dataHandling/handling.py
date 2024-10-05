@@ -4,6 +4,6 @@ class dataHandler:
     def __init__(self):
         return
 
-    def print_handling():
+    def print_handling(self):
         print("Hello from handling")
         return

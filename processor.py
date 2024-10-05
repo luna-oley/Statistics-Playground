@@ -10,14 +10,9 @@ def main():
     handler = dataHandler()
     reciever = dataReceiver()
 
-
     handler.print_handling()
     reciever.print_input()
-    storage.print_storage()
-
-    #print_handling()
-    #print_input()
-    #print_storage()
+q    storage.print_storage()
 
 # Using the special variable
 # __name__
