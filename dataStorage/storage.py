@@ -1,9 +1,9 @@
-def print_storage():
-    print("Hello from storage")
 class dataMaintainer:
     def __init__(self, argument1, argument2):
         return
+    def __init__(self):
+        return
 
-    def print_storage():
+    def print_storage(self):
         print("Hello from storage")
         return
