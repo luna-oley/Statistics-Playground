@@ -18,6 +18,7 @@ class dataMaintainer:
     def write_to_log_file(self, message):
         logging.info(message)
         return
+
     def read_log_file_to_console(self, fileName):
         with open(fileName, 'r') as logFile:
             for line in logFile:
