@@ -1,12 +1,18 @@
 from dataHandling.handling import *
 from dataInput.input import *
 from dataStorage.storage import *
+import sys
+
+def handle_arguments():
+    if len(sys.argv)>=2:
+        print(sys.argv[1])
+
 
 # Defining main function
 def main():
-    print("Hello World")
-
+    handle_arguments()
     storage = dataMaintainer("debugLog.log")
+    print("123")
     handler = dataHandler()
     reciever = dataReceiver()
 
