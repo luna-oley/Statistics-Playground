@@ -13,13 +13,20 @@ class dataMaintainer:
         while True:
             time.sleep(1)  # Check for new log entries every second
 
-    loggingThread = threading.Thread(target = real_time_read_logs, args = ())
+    def start_logging_thread(self):
+        loggingThread = threading.Thread(target = self.real_time_read_logs, args = (self))
+
+    def stop_thread(stop_event, thread):
+        stop_event.set()
+        qthread.join()
+        print("Thread stopped")
 
     def __generateLogFile(self, fileName:str):
         logging.basicConfig(filename = date.today().strftime("%Y-%m-%d_") + fileName, level = logging.INFO)
         return
 
     def __init__(self, fileName):
+        """dataMaintainer Class Constructor"""
         self.__generateLogFile(fileName)
         self.loggingThread.start()
         return
@@ -38,5 +45,6 @@ class dataMaintainer:
                 print(line.strip())
         return
     def __del__(self):  # body of destructor
+        """dataMaintainer Class Destructor"""
         self.loggingThread.join()
         logging.info("Closed Data Maintainer")

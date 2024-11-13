@@ -10,17 +10,11 @@ def handle_arguments():
 
 # Defining main function
 def main():
-    handle_arguments()
     storage = dataMaintainer("debugLog.log")
-    print("123")
+    handle_arguments()
     handler = dataHandler()
     reciever = dataReceiver()
 
-    handler.print_handling()
-    reciever.print_input()
-    storage.print_storage()
-
-    storage.write_to_log_file("I am a bill")
     storage.read_log_file_to_console("2024-10-12_debugLog.log")
 
 # Using the special variable
